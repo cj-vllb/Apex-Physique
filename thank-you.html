@@ -1,0 +1,215 @@
+<!-- thank-you.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>You're Booked! | Apex Physique</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --void:#050810;
+    --midnight:#0a1120;
+    --slate:#0e1730;
+
+    --gold:#d9b26a;
+    --gold-light:#f0d29a;
+    --gold-dark:#a67e3d;
+    --emerald:#1fd694;
+    --emerald-dark:#0e7a56;
+
+    --ink-soft-dark:#c3cadf;
+
+    --radius:16px;
+    --font-head:'Space Grotesk',sans-serif;
+    --font-body:'Inter',sans-serif;
+    --glow-gold:0 0 30px rgba(217,178,106,.35);
+    --glow-gold-lg:0 0 60px rgba(217,178,106,.28);
+    --glow-emerald:0 0 40px rgba(31,214,148,.35);
+    --ease:cubic-bezier(.22,1,.36,1);
+  }
+
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:var(--font-body);color:#fff;line-height:1.6;
+    min-height:100vh;overflow-x:hidden;
+    background:
+      radial-gradient(70% 60% at 50% 0%,rgba(31,214,148,.16) 0%,transparent 60%),
+      radial-gradient(80% 70% at 100% 100%,rgba(217,178,106,.14) 0%,transparent 55%),
+      linear-gradient(170deg,var(--void) 0%,var(--midnight) 45%,var(--slate) 100%);
+    display:flex;flex-direction:column;
+  }
+  a{text-decoration:none;color:inherit;}
+  h1,h2,h3{font-family:var(--font-head);line-height:1.15;letter-spacing:-0.01em;}
+  button{font-family:inherit;}
+
+  a:focus-visible,button:focus-visible{
+    outline:2px solid var(--gold);
+    outline-offset:3px;
+    border-radius:6px;
+  }
+
+  .container{max-width:640px;margin:0 auto;padding:0 24px;width:100%;}
+
+  header.site-header{padding:26px 0;text-align:center;}
+  .logo-img{max-height:56px;width:auto;margin:0 auto;display:block;}
+
+  .logo-group{
+    display:flex;align-items:center;gap:15px;
+    justify-content:center;
+  }
+  .logo-group .logo-img{
+    max-height:88px;margin:0;
+  }
+  .logo-text{
+    font-family:var(--font-head);font-weight:700;
+    font-size:26px;letter-spacing:-0.01em;color:#f8f7f2;
+    white-space:nowrap;
+  }
+  @media(max-width:600px){
+    .logo-group .logo-img{max-height:64px;}
+    .logo-text{font-size:20px;}
+  }
+
+  main{
+    flex:1;display:flex;align-items:center;justify-content:center;
+    padding:40px 0 80px;
+  }
+
+  .confirmation-card{
+    max-width:560px;text-align:center;
+    background:rgba(20,31,61,.55);
+    backdrop-filter:blur(16px);
+    border:1px solid rgba(217,178,106,.25);
+    border-radius:var(--radius);
+    padding:48px 36px;
+    box-shadow:0 30px 60px rgba(0,0,0,.4);
+    animation:cardIn .7s var(--ease);
+  }
+  @keyframes cardIn{
+    from{opacity:0;transform:translateY(20px);}
+    to{opacity:1;transform:translateY(0);}
+  }
+
+  .confirm-check{
+    display:inline-flex;align-items:center;justify-content:center;
+    width:68px;height:68px;border-radius:50%;
+    background:linear-gradient(135deg,var(--emerald),var(--emerald-dark));
+    color:#04150e;font-size:30px;margin-bottom:22px;
+    box-shadow:var(--glow-emerald);
+  }
+
+  .confirmation-card h1{font-size:30px;margin-bottom:14px;color:#f8f7f2;}
+  .accent{
+    background:linear-gradient(100deg,var(--gold-dark) 0%,var(--gold-light) 45%,var(--gold-dark) 100%);
+    background-size:220% auto;
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+    animation:flow 7s linear infinite;
+  }
+  @keyframes flow{
+    0%{background-position:0% 50%;}
+    100%{background-position:220% 50%;}
+  }
+
+  .confirmation-card p{color:var(--ink-soft-dark);margin-bottom:8px;font-size:15px;}
+  .confirmation-sub{font-size:17px;margin-bottom:28px;}
+
+  .next-steps{
+    text-align:left;
+    background:rgba(255,255,255,.04);
+    border:1px solid rgba(217,178,106,.18);
+    border-radius:12px;
+    padding:20px 22px;
+    margin:0 0 30px;
+  }
+  .next-steps h3{font-size:14px;color:var(--gold-light);margin-bottom:12px;letter-spacing:.02em;}
+  .next-steps ol{padding-left:18px;color:var(--ink-soft-dark);font-size:14px;}
+  .next-steps li{margin-bottom:8px;}
+  .next-steps li:last-child{margin-bottom:0;}
+
+  .btn{
+    position:relative;display:inline-block;
+    padding:15px 30px;border-radius:30px;font-weight:600;font-size:15px;
+    cursor:pointer;border:none;transition:transform .25s var(--ease), box-shadow .25s var(--ease);
+    overflow:hidden;
+  }
+  .btn-primary{
+    background:linear-gradient(135deg,var(--gold-light),var(--gold-dark));
+    color:#241705;
+    box-shadow:inset 0 1px 0 rgba(255,255,255,.5), 0 2px 0 var(--gold-dark), 0 10px 24px rgba(166,126,61,.4);
+  }
+  .btn-primary:hover{
+    transform:translateY(-2px) scale(1.02);
+    box-shadow:inset 0 1px 0 rgba(255,255,255,.5), 0 2px 0 var(--gold-dark), 0 14px 30px rgba(166,126,61,.55), var(--glow-gold);
+  }
+  .btn-outline{
+    background:rgba(255,255,255,.04);
+    border:1px solid rgba(217,178,106,.4);
+    color:#fff;
+    margin-top:14px;
+  }
+  .btn-outline:hover{
+    background:var(--gold);border-color:var(--gold);color:#241705;
+    transform:translateY(-2px);box-shadow:var(--glow-gold);
+  }
+  .full-width{width:100%;text-align:center;}
+
+  footer.site-footer{
+    text-align:center;padding:24px;font-size:13px;color:#6b7292;
+    border-top:1px solid rgba(217,178,106,.1);
+  }
+
+  @media(prefers-reduced-motion:reduce){
+    .confirmation-card{animation:none;}
+    .accent{animation:none;background-position:0 0;}
+    *{animation-duration:.001ms !important; transition-duration:.001ms !important;}
+  }
+
+  @media(max-width:600px){
+    .confirmation-card{padding:36px 22px;}
+    .confirmation-card h1{font-size:24px;}
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <div class="logo-group">
+      <img src="apexlogo.png" alt="Apex Physique Logo" class="logo-img">
+      <span class="logo-text">Apex Physique</span>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+    <div class="confirmation-card">
+      <span class="confirm-check">✔</span>
+      <h1>APPLICATION RECEIVED &amp; <span class="accent">CALL BOOKED!</span></h1>
+      <p class="confirmation-sub">Check your email for your calendar invite. Here's what to do next...</p>
+
+      <div class="next-steps">
+        <h3>WHILE YOU WAIT FOR YOUR CALL</h3>
+        <ol>
+          <li>Add the calendar invite to your phone so you don't miss it.</li>
+          <li>Reply to the confirmation email with any questions about your goals.</li>
+          <li>Join our private community for daily tips from the coaching team.</li>
+        </ol>
+      </div>
+
+      <a href="#" class="btn btn-primary full-width">Join Our Private Facebook Group →</a>
+      <br>
+      <a href="index.html#testimonials" class="btn btn-outline full-width">See Client Success Stories →</a>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <span>© 2026 Apex Physique. All Rights Reserved</span>
+</footer>
+
+</body>
+</html>

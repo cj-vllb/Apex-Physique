@@ -5,46 +5,51 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Apex Physique | Executive Fat-Loss Coaching</title>
+<script>document.documentElement.classList.add('js');</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
 <header class="site-header">
   <div class="container header-inner">
-    <a href="#step1" class="logo"><img src="apexlogo.png" alt="Apex Physique Logo" class="logo-img"></a>
-    <nav class="main-nav" id="mainNav">
+    <a href="#step1" class="logo"><img src="assets/logo.png" alt="Apex Physique" class="logo-img"></a>
+    <nav class="main-nav" id="mainNav" aria-label="Main">
       <a href="#step1">Home</a>
       <a href="#program">Program</a>
       <a href="#step2">Method</a>
       <a href="#results">Results</a>
       <a href="#faq">FAQ</a>
     </nav>
-    <a href="#step3" class="btn btn-primary desktop-only">Apply Now</a>
-    <button class="hamburger" id="hamburger" aria-label="Menu">☰</button>
+    <a href="#step3" class="btn btn-primary desktop-only">Apply now</a>
+    <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false" aria-controls="mainNav">☰</button>
   </div>
 </header>
 
 <!-- STEP 1: OPT-IN -->
 <section class="hero" id="step1">
+  <img class="hero-bg" alt="" fetchpriority="high"
+       src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=1600&q=80"
+       srcset="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=900&q=80 900w, https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=1600&q=80 1600w, https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=2400&q=80 2400w"
+       sizes="100vw">
+  <div class="scene" aria-hidden="true">
+    <div class="scene-layer scene-back"><div class="scene-art"></div></div>
+    <div class="scene-layer scene-front"><div class="scene-art"></div></div>
+  </div>
   <div class="container hero-inner">
-    <div class="hero-text reveal reveal-left">
-      <span class="pill">For Busy Professionals, Ages 30&ndash;50</span>
-      <h1>DROP <span class="accent">15LBS IN 90 DAYS. </span><br>THE BUSY PROFESSIONAL'S BLUEPRINT</h1>
-      <p class="hero-sub">A private, done-with-you coaching system built around a demanding career &mdash; not against it.</p>
-      <div class="hero-cta-card">
-        <button type="button" class="btn btn-primary full-width" id="heroCtaBtn">Book My Strategy Session →</button>
+    <div class="hero-text">
+      <h1 class="reveal">Drop <span class="accent">15lbs in 90 days.</span> The busy professional's blueprint</h1>
+      <p class="hero-sub reveal">A private, done-with-you coaching system built around a demanding career &mdash; not against it.</p>
+      <div class="hero-actions reveal">
+        <button type="button" class="btn btn-primary full-width" id="heroCtaBtn">Book my strategy session</button>
         <p class="hero-cta-note">Free 90-day blueprint, instantly. No spam, ever.</p>
       </div>
-    </div>
-    <div class="hero-media reveal reveal-right">
-      <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=800&q=80" alt="Professional client training with coach">
-      <div class="hero-card">
-        <strong>112+</strong>
-        <p>Executives Transformed</p>
-        <span>Avg. 17lbs Lost in 90 Days</span>
-      </div>
+      <dl class="hero-proof reveal">
+        <div><dt><span class="count" data-count="112" data-delay="450" style="--n:3">112</span><span class="unit">+</span></dt><dd>Executives transformed</dd></div>
+        <div><dt><span class="count" data-count="17" data-delay="450" style="--n:2">17</span><span class="unit">lbs</span></dt><dd>Average lost in 90 days</dd></div>
+      </dl>
     </div>
   </div>
 </section>
@@ -52,125 +57,125 @@
 <section class="brands">
   <div class="container reveal">
     <p class="brands-label">Trusted by leaders at</p>
-    <div class="brands-row">
-      <span>LOGOIPSUM</span><span>LOGOIPSUM</span><span>LOGOIPSUM</span><span>LOGOIPSUM</span><span>LOGOIPSUM</span><span>LOGO</span>
+    <div class="marquee" data-marquee>
+      <div class="marquee-track">
+        <ul class="marquee-group" role="list">
+          <li>LOGOIPSUM</li><li>LOGOIPSUM</li><li>LOGOIPSUM</li><li>LOGOIPSUM</li><li>LOGOIPSUM</li><li>LOGO</li>
+        </ul>
+      </div>
     </div>
   </div>
 </section>
 
 <section class="about" id="program">
   <div class="container about-inner">
-    <div class="about-text reveal reveal-left">
-      <span class="pill">The Method</span>
-      <h2>BUILT FOR PEOPLE WHO CAN'T AFFORD TO WASTE <span class="accent">TIME, WILLPOWER, OR RESULTS.</span></h2>
-      <p class="section-lead">No crash diets. No 90-minute gym sessions. Just a data-driven nutrition and training framework engineered around your calendar, your travel, and your favorite meals.</p>
-      <a href="#step3" class="btn btn-primary">Apply for a Strategy Session →</a>
-      <div class="stats">
-        <div><strong>90</strong><span>Day Transformation</span></div>
-        <div><strong>3hrs</strong><span>Avg. Weekly Training</span></div>
-        <div><strong>94%</strong><span>Client Retention</span></div>
+    <div class="about-text">
+      <h2 class="reveal reveal-left">Results without wasted effort</h2>
+      <p class="section-lead reveal reveal-left">No crash diets. No 90-minute gym sessions. Just a data-driven nutrition and training framework engineered around your calendar, your travel, and your favorite meals.</p>
+      <div class="reveal reveal-left"><a href="#step3" class="btn btn-primary">Apply for a strategy session</a></div>
+      <div class="stats reveal">
+        <div><strong><span class="count" data-count="90" style="--n:2">90</span></strong><span>Day transformation</span></div>
+        <div><strong><span class="count" data-count="3" data-duration="1200" style="--n:1">3</span><span class="unit">hrs</span></strong><span>Avg. weekly training</span></div>
+        <div><strong><span class="count" data-count="94" style="--n:2">94</span><span class="unit">%</span></strong><span>Client retention</span></div>
       </div>
     </div>
-    <div class="about-media reveal reveal-right">
-      <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=800&q=80" alt="Coach reviewing client progress data">
-    </div>
+    <figure class="about-media cut">
+      <img class="reveal-img" src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=1000&q=80" alt="Coach reviewing client progress data">
+    </figure>
   </div>
 </section>
 
 <section class="why-us">
   <div class="container why-inner">
-    <div class="why-text reveal reveal-left">
-      <span class="pill">Why Apex</span>
-      <h2>A COACHING EXPERIENCE BUILT <span class="accent">EXCLUSIVELY</span> FOR HIGH PERFORMERS</h2>
-      <p>Every plan is built around your schedule, your travel, and your metabolism &mdash; not a one-size-fits-all template. This is precision coaching for people who expect results commensurate with their effort in every other part of life.</p>
+    <div class="why-text">
+      <h2 class="reveal reveal-left">Coaching built for high performers</h2>
+      <p class="reveal reveal-left">Every plan is built around your schedule, your travel, and your metabolism &mdash; not a one-size-fits-all template. This is precision coaching for people who expect results commensurate with their effort in every other part of life.</p>
     </div>
-    <div class="why-list">
-      <div class="why-item reveal reveal-right">
-        <img src="https://placehold.co/300x200/0a1330/d9b26a?text=1%3A1+Coaching" alt="1:1 coaching">
-        <div><h4>1:1 DEDICATED COACH</h4><p>Direct weekly access to a certified coach who studies your data, not a generic app.</p></div>
-      </div>
-      <div class="why-item reveal reveal-right">
-        <img src="https://placehold.co/300x200/0a1330/d9b26a?text=Flexible+Plan" alt="Flexible nutrition plan">
-        <div><h4>NO FOOD RESTRICTION</h4><p>A macro framework that fits business dinners, travel, and the meals you actually enjoy.</p></div>
-      </div>
-      <div class="why-item reveal reveal-right">
-        <img src="https://placehold.co/300x200/0a1330/d9b26a?text=Efficient+Training" alt="Time efficient training">
-        <div><h4>UNDER 3 HOURS A WEEK</h4><p>High-efficiency training protocols designed for people with demanding calendars.</p></div>
-      </div>
-      <div class="why-item reveal reveal-right">
-        <img src="https://placehold.co/300x200/0a1330/d9b26a?text=Data+Driven" alt="Data driven tracking">
-        <div><h4>DATA-DRIVEN ADJUSTMENTS</h4><p>Weekly check-ins and metrics reviews so your plan evolves as fast as you do.</p></div>
-      </div>
-    </div>
+    <ul class="why-list">
+      <li class="why-item reveal reveal-right"><h3>1:1 dedicated coach</h3><p>Direct weekly access to a certified coach who studies your data, not a generic app.</p></li>
+      <li class="why-item reveal reveal-right"><h3>No food restriction</h3><p>A macro framework that fits business dinners, travel, and the meals you actually enjoy.</p></li>
+      <li class="why-item reveal reveal-right"><h3>Under 3 hours a week</h3><p>High-efficiency training protocols designed for people with demanding calendars.</p></li>
+      <li class="why-item reveal reveal-right"><h3>Data-driven adjustments</h3><p>Weekly check-ins and metrics reviews so your plan evolves as fast as you do.</p></li>
+    </ul>
   </div>
 </section>
 
 <!-- STEP 2: VSL -->
 <section class="video" id="step2">
   <div class="container">
-    <span class="pill reveal">The Method</span>
-    <h2 class="reveal">WATCH HOW THE <span class="accent">BLUEPRINT</span> WORKS</h2>
-    <p class="video-sub reveal">A 6-minute breakdown of the exact system we use to help busy professionals lose 15&ndash;20lbs without overhauling their lives.</p>
+    <div class="video-head">
+      <h2 class="reveal">Watch how the blueprint works</h2>
+      <p class="video-sub reveal">A 6-minute breakdown of the exact system we use to help busy professionals lose 15&ndash;20lbs without overhauling their lives.</p>
+    </div>
     <div class="video-wrapper reveal" id="videoWrapper">
       <div class="video-placeholder" id="videoPlaceholder">
         <button id="playBtn" aria-label="Play video">▶</button>
         <p>Click to watch the full breakdown</p>
       </div>
     </div>
-    <a href="#step3" class="btn btn-primary video-cta reveal">Apply for a Strategy Session →</a>
+    <div class="video-cta reveal"><a href="#step3" class="btn btn-primary">Apply for a strategy session</a></div>
   </div>
 </section>
 
 <section class="testimonials" id="results">
   <div class="container">
     <span id="testimonials" class="anchor-offset" aria-hidden="true"></span>
-    <div class="section-head reveal">
-      <div>
-        <span class="pill">Client Results</span>
-        <h2>REAL RESULTS FROM <span class="accent">REAL PROFESSIONALS</span></h2>
-      </div>
-      <div class="section-desc">
+    <div class="section-head">
+      <h2 class="reveal reveal-left">Results from professionals</h2>
+      <div class="section-desc reveal reveal-right">
         <p>Every transformation below started with the same application process you're about to complete.</p>
       </div>
     </div>
-    <div class="grid-3" id="testimonialGrid">
-      <div class="testimonial-card reveal"><div class="stars">★★★★★</div><p>"Lost 19lbs in 90 days without missing a single client dinner. The coaching was built around my actual life, not some fantasy schedule."</p><div class="reviewer"><img src="https://placehold.co/48x48/0a1330/d9b26a?text=SM"><div><strong>Sarah M.</strong><span>VP of Sales</span></div></div></div>
-      <div class="testimonial-card reveal"><div class="stars">★★★★★</div><p>"Three hours a week was all it took. My coach adjusted my plan every single week based on real data, not guesswork."</p><div class="reviewer"><img src="https://placehold.co/48x48/0a1330/d9b26a?text=JC"><div><strong>James C.</strong><span>Managing Partner</span></div></div></div>
-      <div class="testimonial-card reveal"><div class="stars">★★★★★</div><p>"Down 22lbs and I still eat out four nights a week for work. This is the first program that actually respected my schedule."</p><div class="reviewer"><img src="https://placehold.co/48x48/0a1330/d9b26a?text=ER"><div><strong>Emily R.</strong><span>Founder &amp; CEO</span></div></div></div>
+    <div class="quotes" id="testimonialGrid">
+      <figure class="review reveal">
+        <div class="stars" role="img" aria-label="5 out of 5 stars">★★★★★</div>
+        <blockquote><p>&ldquo;Lost 19lbs in 90 days without missing a single client dinner. The coaching was built around my actual life, not some fantasy schedule.&rdquo;</p></blockquote>
+        <figcaption><strong>Sarah M.</strong><span>VP of Sales</span></figcaption>
+      </figure>
+      <figure class="review reveal">
+        <div class="stars" role="img" aria-label="5 out of 5 stars">★★★★★</div>
+        <blockquote><p>&ldquo;Three hours a week was all it took. My coach adjusted my plan every single week based on real data, not guesswork.&rdquo;</p></blockquote>
+        <figcaption><strong>James C.</strong><span>Managing Partner</span></figcaption>
+      </figure>
+      <figure class="review reveal">
+        <div class="stars" role="img" aria-label="5 out of 5 stars">★★★★★</div>
+        <blockquote><p>&ldquo;Down 22lbs and I still eat out four nights a week for work. This is the first program that actually respected my schedule.&rdquo;</p></blockquote>
+        <figcaption><strong>Emily R.</strong><span>Founder &amp; CEO</span></figcaption>
+      </figure>
     </div>
   </div>
 </section>
 
 <!-- STEP 3: 2-STEP FLOW (GHL Application Form > GHL Calendar) -->
 <section class="apply" id="step3">
+  <div class="scene" aria-hidden="true"><div class="scene-art"></div></div>
   <div class="container apply-inner">
-    <div class="apply-text reveal reveal-left">
-      <span class="pill" id="inlineStepPill">Step 1 of 2</span>
-      <h2>APPLY FOR YOUR <span class="accent">STRATEGY SESSION</span></h2>
-      <p>This program is application-only. Complete the three quick steps so we can determine if you're a fit before booking your call.</p>
+    <div class="apply-text">
+      <h2 class="reveal reveal-left">Apply for your strategy session</h2>
+      <p class="reveal reveal-left">This program is application-only. Complete the two quick steps so we can determine if you're a fit before booking your call.</p>
     </div>
 
     <div class="apply-form reveal reveal-right step-flow" id="inlineFlow" data-flow="inline">
-      <div class="step-progress">
+      <div class="step-progress" role="img" aria-label="Step 1 of 2">
         <span class="step-dot active" data-dot="1"></span>
         <span class="step-dot" data-dot="2"></span>
       </div>
 
       <!-- Inline Step 1: GHL Application Form -->
       <div class="step-panel active" data-step="1">
-        <h3>Tell Us About You</h3>
+        <h3>Tell us about you</h3>
         <p class="step-sub">Complete the short application below so we can prep your strategy session.</p>
         <div class="ghl-embed-container" id="inlineFormEmbed">
           <!-- GHL FORM EMBED CODE GOES HERE -->
         </div>
         <div class="step-nav">
-          <button type="button" class="btn btn-primary full-width" data-action="next">Continue to Booking →</button>
+          <button type="button" class="btn btn-primary full-width" data-action="next">Continue to booking</button>
         </div>
       </div>
 
       <!-- Inline Step 2: GHL Calendar -->
       <div class="step-panel" data-step="2">
-        <h3>Great! You Qualify.</h3>
+        <h3>Great! You qualify.</h3>
         <p class="step-sub">Choose a time below for your free, no-obligation strategy session with an Apex coach.</p>
         <div class="calendar-embed inline-embed">
           <div class="ghl-embed-container" id="inlineCalendarEmbed">
@@ -179,7 +184,7 @@
         </div>
         <div class="step-nav split">
           <button type="button" class="btn btn-outline" data-action="back">← Back</button>
-          <button type="button" class="btn btn-primary" data-action="confirm">Confirm My Session Time →</button>
+          <button type="button" class="btn btn-primary" data-action="confirm">Confirm my session time</button>
         </div>
       </div>
     </div>
@@ -189,17 +194,16 @@
 <section class="faq" id="faq">
   <div class="container faq-inner">
     <div class="faq-text reveal reveal-left">
-      <span class="pill">FAQ</span>
-      <h2>ANSWERS TO YOUR <span class="accent">COACHING QUESTIONS</span></h2>
+      <h2>Your questions, answered</h2>
       <p>Find quick answers before your strategy session. Still have questions? We'll cover them on the call.</p>
     </div>
     <div class="faq-list reveal reveal-right" id="faqList">
-      <div class="faq-item"><button class="faq-q">Do I have to give up my favorite foods? <span>+</span></button><div class="faq-a"><p>No. We build your plan around a flexible macro framework that fits business dinners, travel, and the meals you already enjoy.</p></div></div>
-      <div class="faq-item"><button class="faq-q">How much time does this require each week? <span>+</span></button><div class="faq-a"><p>Most clients train under 3 hours per week using high-efficiency protocols designed for demanding schedules.</p></div></div>
-      <div class="faq-item"><button class="faq-q">Is this program only for people who already work out? <span>+</span></button><div class="faq-a"><p>Not at all. We coach complete beginners through experienced lifters &mdash; your plan is built around your current level.</p></div></div>
-      <div class="faq-item"><button class="faq-q">What happens on the strategy session call? <span>+</span></button><div class="faq-a"><p>We'll review your goals, current habits, and schedule, then map out exactly what your first 90 days would look like.</p></div></div>
-      <div class="faq-item"><button class="faq-q">Is coaching available if I travel frequently for work? <span>+</span></button><div class="faq-a"><p>Yes, many of our clients travel weekly. Your plan is built to flex around hotel gyms, room-only workouts, and dining out.</p></div></div>
-      <div class="faq-item"><button class="faq-q">How do I get started? <span>+</span></button><div class="faq-a"><p>Submit the short application above. If you're a fit, you'll be taken straight to book your free strategy session.</p></div></div>
+      <div class="faq-item"><button class="faq-q" aria-expanded="false">Do I have to give up my favorite foods? <span aria-hidden="true">+</span></button><div class="faq-a"><p>No. We build your plan around a flexible macro framework that fits business dinners, travel, and the meals you already enjoy.</p></div></div>
+      <div class="faq-item"><button class="faq-q" aria-expanded="false">How much time does this require each week? <span aria-hidden="true">+</span></button><div class="faq-a"><p>Most clients train under 3 hours per week using high-efficiency protocols designed for demanding schedules.</p></div></div>
+      <div class="faq-item"><button class="faq-q" aria-expanded="false">Is this program only for people who already work out? <span aria-hidden="true">+</span></button><div class="faq-a"><p>Not at all. We coach complete beginners through experienced lifters &mdash; your plan is built around your current level.</p></div></div>
+      <div class="faq-item"><button class="faq-q" aria-expanded="false">What happens on the strategy session call? <span aria-hidden="true">+</span></button><div class="faq-a"><p>We'll review your goals, current habits, and schedule, then map out exactly what your first 90 days would look like.</p></div></div>
+      <div class="faq-item"><button class="faq-q" aria-expanded="false">Is coaching available if I travel frequently for work? <span aria-hidden="true">+</span></button><div class="faq-a"><p>Yes, many of our clients travel weekly. Your plan is built to flex around hotel gyms, room-only workouts, and dining out.</p></div></div>
+      <div class="faq-item"><button class="faq-q" aria-expanded="false">How do I get started? <span aria-hidden="true">+</span></button><div class="faq-a"><p>Submit the short application above. If you're a fit, you'll be taken straight to book your free strategy session.</p></div></div>
     </div>
   </div>
 </section>
@@ -207,7 +211,7 @@
 <footer class="site-footer">
   <div class="container footer-inner">
     <div class="footer-brand">
-      <a href="#" class="logo"><img src="apexlogo.png" alt="Apex Physique Logo" class="logo-img"></a>
+      <a href="#" class="logo"><img src="assets/logo.png" alt="Apex Physique" class="logo-img"></a>
       <p>Executive fat-loss coaching for busy professionals who refuse to compromise on results.</p>
     </div>
     <div class="footer-col">
@@ -224,14 +228,14 @@
       <p><a href="#faq">FAQ</a></p>
     </div>
     <div class="footer-col">
-      <h4>Social Links</h4>
+      <h4>Social links</h4>
       <p><a href="#">Instagram</a></p>
       <p><a href="#">LinkedIn</a></p>
       <p><a href="#">YouTube</a></p>
       <p><a href="#">Twitter</a></p>
     </div>
   </div>
-  <div class="footer-wordmark">APEX</div>
+  <div class="footer-wordmark" aria-hidden="true">APEX</div>
   <div class="footer-bottom">
     <span>© 2026 Apex Physique. All Rights Reserved</span>
     <span><a href="#">Terms and conditions</a> | <a href="#">Privacy Policy</a></span>
@@ -244,28 +248,26 @@
     <button type="button" class="modal-close" id="modalClose" aria-label="Close">✕</button>
 
     <div class="step-flow" id="modalFlow" data-flow="modal">
-      <div class="step-progress">
+      <div class="step-progress" role="img" aria-label="Step 1 of 2">
         <span class="step-dot active" data-dot="1"></span>
         <span class="step-dot" data-dot="2"></span>
       </div>
 
       <!-- Modal Step 1: GHL Application Form -->
       <div class="step-panel active" data-step="1">
-        <span class="pill">Step 1 of 2</span>
-        <h3 id="modalTitle">Get Your Free Blueprint</h3>
+        <h3 id="modalTitle">Get your free blueprint</h3>
         <p class="step-sub">Complete the short application below to get started.</p>
         <div class="ghl-embed-container" id="modalFormEmbed">
           <!-- GHL FORM EMBED CODE GOES HERE -->
         </div>
         <div class="step-nav">
-          <button type="button" class="btn btn-primary full-width" data-action="next">Continue to Booking →</button>
+          <button type="button" class="btn btn-primary full-width" data-action="next">Continue to booking</button>
         </div>
       </div>
 
       <!-- Modal Step 2: GHL Calendar -->
       <div class="step-panel" data-step="2">
-        <span class="pill">Step 2 of 2</span>
-        <h3>Great! You Qualify.</h3>
+        <h3>Great! You qualify.</h3>
         <p class="step-sub">Choose a time below for your free strategy session.</p>
         <div class="calendar-embed inline-embed">
           <div class="ghl-embed-container" id="modalCalendarEmbed">
@@ -274,7 +276,7 @@
         </div>
         <div class="step-nav split">
           <button type="button" class="btn btn-outline" data-action="back">← Back</button>
-          <button type="button" class="btn btn-primary" data-action="confirm">Confirm My Session Time →</button>
+          <button type="button" class="btn btn-primary" data-action="confirm">Confirm my session time</button>
         </div>
       </div>
     </div>
